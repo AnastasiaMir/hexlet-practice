@@ -1,17 +1,28 @@
 # file: .github/workflows/hello-world.yml
 name: hello-world
 # on – определяет события, которые запускают воркфлоу
-on: push
+on: 
+  - push
+  - pull_request
 jobs:
   # build – произвольно выбранное имя задания
   # их может быть больше одного
   build:
     # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps: # список шагов, которые надо выполнить
       # экшен, выполняет какую-то задачу
       # checkout – клонирует репозиторий
       - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       # run – произвольная bash-команда
       # ls -la выведет содержимое текущего репозитория
-      - run: ls -la
+      - run: npm ci
+      - run: make lint
