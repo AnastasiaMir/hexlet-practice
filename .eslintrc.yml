@@ -15,7 +15,8 @@ rules:
   #  "import/no-extraneous-dependencies": ["error", {"projectDependencies": false}]
   #  'import/no-extraneous-dependencies': ['error', {projectDependencies: true}]
    "import/no-extraneous-dependencies": "off"
-   linebreak-style: ["error", "unix"]
+  #  linebreak-style: ["error", "unix"]
+   linebreak-style: 0
   #  linebreak-style: ["error", "windows"]
    import/extensions:
     - error
