@@ -2,60 +2,70 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="assets/styles/components/style-registration.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/styles/style.css">
+	<link rel="stylesheet" href="assets/styles/components/style-registration.css" />
 </head>
 
 <body>
-  <div class="top">
-    <div class="logo">
-      <a href="./index.html">
-        <img class="logo__icon" src="assets/img/logo-icon.svg" alt="logo">
-      </a>
+	<div class="wrapper">
+
+		<div class="header top">
+			<div class="logo">
+				<a href="./index.html" class="logo__link">
+					<img class="logo__icon" src="assets/img/logo-icon.svg" alt="logo">
+					<span class="logo__text">I want to keep your secret</span>
+				</a>
+			</div>
+
+			<h2 class="title">Добро пожаловать</h2>
 
 
-      <div class="logo__text">
-        <h3>I want to keep your secrets</h3>
-      </div>
+			<div class="personal entry">
+				<div class="personal__sign-up sign-up">
+					<i class="fa-solid fa-user entry__registration-icon sign-up__icon"></i>
+					<!-- <a href="./registration.html" class="sign-up__link text">Регистрация</a> -->
+					<a href="./registration.html" class="sign-up__link text">
+						<span class="entry__registration">Регистрация</span>
+					</a>
+				</div>
 
-    </div>
-    <div class="greeting">
-      <h1 class="greeting__header">Добро пожаловать</h1>
-    </div>
-    <div class="entry">
-      <i class="fa-solid fa-user entry__registration-icon"></i>
-      <a href="./registration.html"><span class="entry__registration">Регистрация</span></a>
+				<div class="personal__sign-in sign-in">
+					<!-- <a href="./login.html" class="sign-in__link text entry__login">Вход</a> -->
+					<a href="./login.html" class="sign-in__link text">
+						<span class="entry__login">Вход</span>
+					</a>
+					<i class="fa-solid fa-arrow-right-to-bracket sign-in__icon"></i>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="main">
 
-      <a href="./login.html"><span class="entry__login">Вход</span></a>
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
+			<div class="login">
+				<p class="login__paragraph">Вход</p>
+				<input class='login__input-email' type="text" id="email" placeholder="Email">
+				<input class='login__input-password' type="text" id="password" placeholder="Password">
+			</div>
 
-    </div>
-  </div>
+			<div class="button-div">
+				<button class="button-div__btn">Log In</button>
+			</div>
+		
+		</div>
+		
+		<footer class="footer">
+			<span class="footer__text">© AbraCodeAbra.com. Все права защищены. 2023</span>
+		</footer>
+	</div>
 
-  <div class="main">
-    <div class="login">
-      <p class="login__paragraph">Вход</p>
-      <input class='login__input-email' type="text" id="email" placeholder="Email">
-      <input class='login__input-password' type="text" id="password" placeholder="Password">
-
-    </div>
-    <div class="button-div">
-      <button class="button-div__btn">Log In</button>
-    </div>
-
-  </div>
-
-  <footer class="footer">
-    <span class="footer__text">© AbraCodeAbra.com. Все права защищены. 2023</span>
-  </footer>
-  <script type="module" src="./login.js"></script>
+	<script type="module" src="./login.js"></script>
 
 </body>
 
