@@ -1,84 +1,9 @@
-body {
-	padding: 44px 80px;
-  	font-family: 'Nunito', sans-serif;
-	font-size: 22px;
-	font-weight: 700;
-  	line-height: 30px;
-	letter-spacing: 0em;
-	color: #171717;
-	background-color: #FFF9F5;
-
-	margin: 0;
-	box-sizing: border-box;
-	/* overflow: hidden; */
-}
-
-i {
-	margin: 0 5px;
-}
-
-.title,
-.personal,
-.main,
-.button-div,
-.footer {
+.main {
 	display: flex;
 	justify-content: center;
-}
-
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	
-	height: 100vh;
-	margin: 0 auto;
-	
-}
-
-.header {
-	display: flex;
-	justify-content: space-between;
-	flex-grow: 10;
-	height: 250px;
-}
-
-.logo {
-	height: 150px;
-}
-
-.logo__link {
-	display: flex;
-	text-decoration: none;
-}
-
-.logo__icon {
-	display: block;
-}
-
-.logo__text {
-	width: 150px;
-	margin: auto;
-	font-weight: 700;
-	font-size: 22px;
-	line-height: 30px;
-	color: #171717;
-}
-
-.title {
-	width: 45%;
-	margin-top: 44px;
-	font-size: 44px;
-	line-height: 60px;
-}
-
-.personal {
-	flex-direction: row;
-	align-items: baseline;
-	margin-top: 20px;
-	width: 25%;
-/* background-color: red; */
-
+	max-width: 2500px;
+	padding-top: 105px;
+	box-sizing: border-box;
 }
 
 .personal-info-button,
@@ -96,12 +21,6 @@ i {
 	font-weight: 400;
 	line-height: 30px;
 	letter-spacing: 0em;
-}
-  
-.main {
-	max-width: 2500px;
-  	box-sizing: border-box;
-	flex-grow: 70;
 }
   
 .main__left-side {
@@ -125,7 +44,6 @@ i {
 .main__center {
 	width: 84%;
 } 
-
 
 .add-new-button {
 	width: 142px;
@@ -177,12 +95,6 @@ i {
 
 .link-color_blue {
 	color: #0A6AF9;
-}
-
-.footer {
-	  display: flex;
-	  justify-content: center;
-	  flex-grow: 15;
 }
 
 .modal-personal {

@@ -1,51 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@import url('./components/input-registration.css');
+@import url('./components/button-registration.css');
+
+
+ /* .header {background-color: green;}
+.logo {background-color: pink;}
+.title {background-color: yellow;}
+.personal {background-color: red;}
+.main{background-color: pink;}
+.footer{background-color: blue;}
+
+.main__center{background-color: wheat;}
+.main__split-left{background-color: red;}
+.main__center {background-color: wheat;}
+.main__split-right {background-color: brown;}
+.output-form {background-color: pink;}  */
 
 
 body {
-    background-color: #FFF9F5;
-    font-family: 'Nunito';
-    color: #171717;
-}
-
-.wrapper {
-    display: flex;
-    flex: nowrap;
-    max-width: 2500px;
-    height: 100vh;
-    padding: 0 70px;
-    box-sizing: border-box;
-    margin: 0px auto;
-}
-
-.split-left {
-    flex-grow: 18;
-    padding-top: 40px;
-}
-
-.center {
-    flex-grow: 30;
-    padding-top: 40px;
-    width: 712px;
-}
-
-.split-right {
-    flex-grow: 19;
-    padding-top: 40px;
-    padding-left: 40px;
-}
-
-/* Вертикальная линия */
-.vl {
-    border-left: 1px solid #e8e8e8;
-    height: 897px;
-    /* position: absolute; */
-    /* left: 1250px; */
+	margin: 0;
+	padding: 0 80px;
+  	font-family: 'Nunito', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+  	line-height: 30px;
+	letter-spacing: 0em;
+	color: #171717;
+	background-color: #FFF9F5;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .text {
     font-family: 'Nunito';
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
@@ -53,319 +44,86 @@ body {
     text-decoration: none;
 }
 
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
 
-/* Блок с логотипом */
+i {
+	margin: 0 5px;
+}
+
+.title,
+.personal,
+.button-div,
+.footer {
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	/* height: 175px; */
+    height: 100px;
+	padding-top: 40px;
+}
+
 .logo {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    height: 150px;
+	height: 150px;
+    width: 420px;
 }
 
 .logo__link {
-    display: block;
-    position: relative;
+	display: flex;
+	text-decoration: none;
 }
 
 .logo__icon {
-    width: 150px;
+	display: block;
 }
 
 .logo__text {
-    width: 150px;
-    position: absolute;
-    top: 30px;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 30px;
-    color: #171717;
+	width: 150px;
+    margin: auto 0;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 30px;
+	color: #171717;
 }
 
-
-/* SVG иконка башня с нижнего левого угла */
-.split-left__tower {
-    margin-top: 300px;
-}
-
-
-/* Загаловок 'Генератор паролей' */
 .title {
-
-    font-size: 44px;
-    font-weight: 400;
-    line-height: 60px;
-    letter-spacing: 0em;
-
-    text-align: center;
+	width: 45%;
+	/* margin-top: 44px; */
+	font-size: 44px;
+	line-height: 60px;
 }
 
-
-/* Вывод пароля */
-.output-form {
-    position: relative;
-    margin-left: 40px;
-}
-
-.output-form__password {
-    height: 78px;
-    width: 603px;
-    border-radius: 25px;
-    background: #FFFFFF;
-    border: 1px solid #0A6AF9;
-    font-size: 32px;
-    padding-left: 44px;
-
-}
-
-.center__output-form {
-    margin-top: 86px;
-}
-
-/* Уровень надежности пароля */
-.password-check {
-    box-sizing: border-box;
-    padding: 9px;
-    width: 159px;
-    height: 49px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.output-form__password-check {
-    position: absolute;
-    top: 15px;
-    left: 400px;
-}
-
-/* Два стяля для Надежного пароля */
-.password-check_protected {
-    background: #0A40FF;
-}
-
-.password-check-text_protected {
-    color: #FCFCFC;
-    font-family: 'Nunito';
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-/* Два стиял для Плохо пароля */
-.password-check_bad {
-    background: #FF0000;
-}
-
-.password-check-text_bad {
-    color: #FCFCFC;
-    font-family: 'Nunito';
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-/* Два стиля для Хорошего пароля */
-.password-check_good {
-    background: #FFF9D5;
-}
-
-.password-check-text_good {
-    color: #171717;
-    font-family: 'Nunito';
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-/* Блок с кнопкой повторить пароль */
-.output-form__repeat {
-    position: absolute;
-    top: 22px;
-    left: 580px;
-}
-
-.repeat__button {
-    background: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Блок с кнопкой скопировать пароль */
-.output__copy-password {
-    position: absolute;
-    top: 5px;
-    left: 700px;
-}
-
-.copy-password__button {
-    background-color: #FFF9F5;
-    border: none;
-    cursor: pointer;
-}
-
-
-/* Чекбоксы */
-.checkbox-group {
-    text-align: center;
-}
-
-.checkbox {
-    height: 30px;
-    width: 30px;
-    border-radius: 5px;
-}
-
-.checkbox__text {
-    vertical-align: center;
-    font-family: 'Nunito';
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-}
-
-.center__checkbox-group {
-    margin-top: 67px;
-}
-
-
-/* Блок с длиной пароля */
-/* .password-length {} */
-
-
-.password-length__range {
-    width: 425px;
-}
-
-.password-length__range-block {
-    text-align: center;
-}
-
-.password-length__text {
-    text-align: center;
-    color: #171717;
-    font-family: 'Nunito';
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 48px;
-    letter-spacing: 0em;
-    text-align: left;
-    opacity: 0.35;
-}
-
-/* В этом инпуте будет выводиться
-длина пароля */
-
-.password-length__output {
-    margin-top: 49px;
-    width: 45px;
-    height: 35px;
-    margin-left: 30px;
-    border: none;
-    font-family: 'Nunito';
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0em;
-}
-
-.center__password-length {
-    text-align: center;
-    margin-top: 81px;
-}
-
-
-/* Кнопка генерации пароля */
-.generate-password__button {
-    cursor: pointer;
-    box-sizing: border-box;
-    margin-top: 66px;
-    width: 278px;
-    height: 62px;
-    background: #FFF9E9;
-    border: 1px solid #FFF9D5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
-.generate-password__button:active {
-    transform: translateY(1px);
-    filter: saturate(150%);
-    background-color: #FFF9E9;
-}
-
-.center__generate-password {
-    text-align: center;
-}
-
-
-/* Копирайт */
-.copyright {
-    margin-top: 94px;
-    text-align: center;
-}
-
-.copyright__text {
-    font-family: Nunito;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-
-/* Блок с авторизацией */
 .personal {
-    position: relative;
-    text-align: center;
+	flex-direction: row;
+	align-items: baseline;
+	margin-top: 20px;
+    width: 420px;
 }
 
-.personal__sign-up {
-    position: absolute;
-    left: 50px;
+.footer {
+    display: flex;
+    justify-content: center;
+	height: 70px;
 }
 
-
-.personal__sign-in {
-    position: absolute;
-    left: 240px;
-}
-
-
-.sign-up__link {
-    vertical-align: top;
-}
-
-
-.sign-in__link {
-    vertical-align: top;
-}
-
-
-/* Какой пароль надежный */
-
-.explain__list {
-    margin-top: 40px;
-}
-
-.explain__item {
-    position: relative;
-    margin-top: 40px;
-    list-style-type: none;
-}
-
-.explain__text {
-    position: absolute;
-    top: 12px;
-    left: 60px;
-}
-
-.split-right__explain {
-    margin-top: 54px;
+.main {
+	max-width: 2500px;
+  	box-sizing: border-box;
+	flex-grow: 70;
+    justify-content: space-between;
 }
