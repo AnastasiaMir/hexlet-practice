@@ -15,9 +15,7 @@ const emailSchema = string()
 const passwordSchema = string()
   .min(8, { field: 'password', message: 'Пароль должен быть не менее 8 символов' })
   .required({ field: 'password', message: 'Пароль обязательное поле' })
-  .matches(/\d+/, { message: { field: 'password', message: 'Пароль должен содержать цифры' } })
   .matches(/[a-z]+/, { message: { field: 'password', message: 'Пароль должен содержать маленькие буквы' } })
-  .matches(/[A-Z]+/, { message: { field: 'password', message: 'Пароль должен содержать большие буквы' } })
   .test(
     'Password has russian letters',
     { field: 'password', message: 'Пароль содержит русские буквы' },
@@ -38,7 +36,7 @@ signUpForm.addEventListener('submit', async (event) => {
   await validate(emailSchema, email);
   await validate(passwordSchema, password);
   if (isNotErrors(signUpForm)) {
-    // event.target.submit();
-    alert('Форма отправлена!');
+    event.target.submit();
+    // alert('Форма отправлена!');
   }
 });
