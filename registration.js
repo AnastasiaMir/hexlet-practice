@@ -38,7 +38,7 @@ signUpForm.addEventListener('submit', async (event) => {
   await validate(emailSchema, email);
   await validate(passwordSchema, password);
   if (isNotErrors(signUpForm)) {
-    //event.target.submit();
+    // event.target.submit();
     alert('Форма отправлена!');
   }
 });
