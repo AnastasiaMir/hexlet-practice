@@ -3,7 +3,7 @@ import { validate, isNotErrors } from './validation.js';
 
 const email = document.querySelector('.login__input-email');
 const password = document.querySelector('.login__input-password');
-const loginForm = document.getElementById('loginForm');
+const loginForm = document.querySelector('form');
 
 const emailSchema = string()
   .email({ field: 'email', message: 'Некорректный email' })
