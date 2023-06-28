@@ -1,8 +1,9 @@
 import { string } from 'yup';
-import { validate, removeErrors } from './validation.js';
+import { validate, isNotErrors } from './validation.js';
 
 const email = document.querySelector('.login__input-email');
 const password = document.querySelector('.login__input-password');
+const loginForm = document.getElementById('loginForm');
 
 const emailSchema = string()
   .email({ field: 'email', message: 'Некорректный email' })
@@ -22,3 +23,12 @@ const passwordSchema = string()
 
 email.oninput = () => validate(emailSchema, email);
 password.oninput = () => validate(passwordSchema, password);
+loginForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  await validate(emailSchema, email);
+  await validate(passwordSchema, password);
+  if (isNotErrors(loginForm)) {
+    // event.target.submit();
+    alert('Форма отправлена!');
+  }
+});

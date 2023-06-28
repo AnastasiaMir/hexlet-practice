@@ -47,16 +47,17 @@
 		</div>
 		
 		<div class="main">
+			<form id="loginForm" action="/login" class="form flex" method="post">
+				<div class="login">
+					<p class="login__paragraph">Вход</p>
+					<input class='login__input-email' type="text" id="email" placeholder="Email">
+					<input class='login__input-password' type="text" id="password" placeholder="Password">
+				</div>
 
-			<div class="login">
-				<p class="login__paragraph">Вход</p>
-				<input class='login__input-email' type="text" id="email" placeholder="Email">
-				<input class='login__input-password' type="text" id="password" placeholder="Password">
-			</div>
-
-			<div class="button-div">
-				<button class="button-div__btn">Log In</button>
-			</div>
+				<div class="button-div">
+					<button type="submit" class="button-div__btn">Log In</button>
+				</div>
+			</form>
 		
 		</div>
 		

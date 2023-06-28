@@ -40,17 +40,18 @@
 		</div>
 		
 		<div class="main">
-			
-			<div class="registration">
-				<p class="registration__paragraph">Регистрация</p>
-				<input class='registration__input-login' type="text" id="login" placeholder="Login">
-				<input class='registration__input-email' type="text" id="email" placeholder="Email">
-				<input class='registration__input-password' type="text" id="password" placeholder="Password">
-			</div>
+			<form id="signUpForm" action="/singup" class="form flex" method="post">
+				<div class="registration">
+					<p class="registration__paragraph">Регистрация</p>
+					<input class='registration__input-login' type="text" id="login" placeholder="Login">
+					<input class='registration__input-email' type="text" id="email" placeholder="Email">
+					<input class='registration__input-password' type="text" id="password" placeholder="Password">
+				</div>
 
-			<div class="button-div">
-				<button class="button-div__btn">Sign Up</button>
-			</div>
+				<div class="button-div">
+					<button type ="submit" class="button-div__btn">Sign Up</button>
+				</div>
+			</form>
 		
 		</div>
 		
