@@ -4,7 +4,7 @@ import { validate, isNotErrors } from './validation.js';
 const login = document.querySelector('.registration__input-login');
 const email = document.querySelector('.registration__input-email');
 const password = document.querySelector('.registration__input-password');
-const signUpForm = document.getElementById('signUpForm');
+const signUpForm = document.querySelector('form');
 
 const loginSchema = string()
   .min(8, { field: 'login', message: 'Login должен быть не менее 8 символов' });
