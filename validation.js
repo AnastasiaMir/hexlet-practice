@@ -4,6 +4,11 @@ function removeErrors(input) {
   input.classList.remove('error-border');
 }
 
+function isNotErrors(form) {
+  const errors = form.querySelectorAll('[class*="-error-label"]');
+  return (errors.length === 0);
+}
+
 function createErrors(err, input) {
   const parent = input.parentNode;
   const errorLabel = document.createElement('label');
@@ -26,4 +31,5 @@ export {
   removeErrors,
   createErrors,
   validate,
+  isNotErrors,
 };
